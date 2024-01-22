@@ -25,5 +25,11 @@ pipeline {
                 sh "mvn -Dmaven.test.failure.ignore=true package"
             }
         }
+
+        stage('Deploy') {
+            steps {
+                sh "java -jar spring-petclinic-*.jar"
+            }
+        }
     }
 }
