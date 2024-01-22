@@ -7,11 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git url: 'https://github.com/theo77186/SpringPetClinic.git', branch: 'main'
-            }
-        }
         stage('Build') {
             steps {
                 // Run Maven.
@@ -19,7 +14,7 @@ pipeline {
             }
         }
 
-        stage('test') {
+        stage('Test') {
             steps {
                 sh "mvn test"
             }
