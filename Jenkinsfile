@@ -28,7 +28,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh "java -jar spring-petclinic-*.jar"
+                sh "java -jar target/spring-petclinic-*.jar"
             }
         }
     }
